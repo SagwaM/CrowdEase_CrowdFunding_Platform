@@ -9,7 +9,11 @@ const donationRoutes = require('./routes/donationRoutes');
 const mpesaRoutes = require('./routes/mpesaRoutes');
 const sendSMS = require('./helpers/sendSMS'); 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://localhost:5000", // Replace with your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 app.use(express.json());
 
 // Connect to MongoDB
@@ -18,6 +22,10 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 }).then(() => console.log('✅ MongoDB connected'))
   .catch(err => console.log(err));
+
+  app.get("/", (req, res) => {
+    res.send("Server is running");
+  });
 
 // Routes
 app.use('/api/donations', donationRoutes);
