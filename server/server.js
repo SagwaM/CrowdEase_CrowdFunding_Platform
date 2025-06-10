@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const http = require('http');  // Needed for WebSockets
 
 dotenv.config();
 
@@ -24,7 +25,7 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.log(err));
 
   app.get("/", (req, res) => {
-    res.send("Server is running");
+    res.send("CrowdFunding Platform is running...");
   });
 
 // Routes

@@ -162,19 +162,14 @@ const Donate = () => {
         return;
       }
       const normalizedPhone = normalizePhoneNumber(data.phone);
-      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/donations/initiate`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',},
-      body: JSON.stringify({
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/donations/initiate`, {
         phone: normalizedPhone,
         amount: parseInt(data.amount),
-        cause: selectedCause?.title || 'General Donation',
+        cause: data.title || 'General Donation',
         name: data.name
-      }),
     });
 
-    const result = await response.json();
+    const result = response.data;
 
     if (!response.ok) {
       throw new Error(result.message || 'STK push failed');
