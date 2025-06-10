@@ -24,7 +24,11 @@ dist-ssr
 *.sw?
 
 # Ignore environment variables
-.env
+# Ignore .env in the client
+/client/.env
+# Ignore .env in the server
+/server/.env
+.env.server
 .env.local
 .env.development
 .env.production
