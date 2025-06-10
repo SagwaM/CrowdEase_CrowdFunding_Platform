@@ -27,6 +27,10 @@ A full-stack donation platform built to empower communities by facilitating cont
 - Themed with Material UI + custom styles
 
 ---
+### Demo Credentials
+  Username: admin
+  Password: admin123
+---
 
 ## 🧑‍💻 Tech Stack
 
