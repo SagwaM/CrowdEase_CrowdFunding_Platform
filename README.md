@@ -150,6 +150,10 @@ Push to the branch (git push origin feature/refund)
 
 Open a Pull Request
 
+## 🔗 Links
+- **GitHub Repository**: [https://github.com/SagwaM/CrowdEase_CrowdFunding_Platform](https://github.com/SagwaM/CrowdEase_CrowdFunding_Platform)
+- **Live Demo**: [https://crowdease.com](https://crowd-ease-crowd-funding-platform.vercel.app/)
+
 📄 License
 MIT License. See LICENSE file for details.
 
