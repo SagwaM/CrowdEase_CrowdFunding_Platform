@@ -160,4 +160,8 @@ Lucide Icons
 
 React Query
 
+<<<<<<< HEAD
 M-Pesa API Docs
+=======
+M-Pesa API Docs
+>>>>>>> 8f2c9179a7e684a7d01e8bf76931b278ff6c921b
