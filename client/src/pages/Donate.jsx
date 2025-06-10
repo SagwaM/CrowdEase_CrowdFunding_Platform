@@ -171,10 +171,9 @@ const Donate = () => {
 
     const result = response.data;
 
-    if (!response.ok) {
-      throw new Error(result.message || 'STK push failed');
+    if (!response.data.success) {
+      throw new Error(response.data.message || 'STK push failed');
     }
-
     toast.success('✅ Donation successful! Check your phone to complete payment.');
       
       // Navigate to thank you page after brief delay
@@ -183,7 +182,8 @@ const Donate = () => {
       }, 2000);
       
     } catch (error) {
-      toast.error('Failed to process donation. Please try again.');
+      console.error('Donation error:', error.response?.data || error.message);
+      toast.error(error.response?.data?.message || 'Failed to process donation. Please try again.');
     } finally {
       setIsLoading(false);
     }
