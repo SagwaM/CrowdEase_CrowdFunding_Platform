@@ -10,7 +10,7 @@ const mpesaRoutes = require('./routes/mpesaRoutes');
 const sendSMS = require('./helpers/sendSMS'); 
 const app = express();
 app.use(cors({
-  origin: "https://localhost:5000", // Replace with your frontend URL
+  origin: "https://crowd-ease-crowd-funding-platform.vercel.app", // Replace with your frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));

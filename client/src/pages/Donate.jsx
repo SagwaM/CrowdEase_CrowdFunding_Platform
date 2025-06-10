@@ -26,6 +26,7 @@ import { Favorite, Phone, Person, AttachMoney, KeyboardArrowUp, WifiOff } from '
 import { LoadingButton } from '@mui/lab';
 import { toast } from 'react-toastify';
 import { useOfflineSync } from '../hooks/useOfflineSync';
+import axios from 'axios';
 
 const Donate = () => {
   const { causeId } = useParams();
@@ -161,7 +162,7 @@ const Donate = () => {
         return;
       }
       const normalizedPhone = normalizePhoneNumber(data.phone);
-      const response = await fetch('http://localhost:5000/api/donations/initiate', {
+      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/donations/initiate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',},
