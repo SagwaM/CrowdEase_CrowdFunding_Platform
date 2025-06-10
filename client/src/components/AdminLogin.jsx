@@ -101,13 +101,12 @@ const AdminLogin = ({ onLogin }) => {
             </Button>
           </Box>
 
-          <Box backgroundColor= 'rgba(87, 151, 113, 0.8)' sx={{ mt: 4, p: 3, borderRadius: 2 }}>
-          <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
+          
+          <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', mt: 4, p: 3, borderRadius: 2 }}>
             Demo Credentials:<br />
             Username: <strong>admin</strong><br />
             Password: <strong>admin123</strong>
           </Typography>
-        </Box>
         </Paper>
       </Container>
     </Box>
