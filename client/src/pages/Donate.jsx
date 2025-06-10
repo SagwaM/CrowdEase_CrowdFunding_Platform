@@ -165,7 +165,7 @@ const Donate = () => {
       const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/donations/initiate`, {
         phone: normalizedPhone,
         amount: parseInt(data.amount),
-        cause: data.title || 'General Donation',
+        cause: selectedCause?.title || 'General Donation',
         name: data.name
     });
 
